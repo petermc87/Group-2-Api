@@ -12,7 +12,7 @@ const educationSchema = new mongoose.Schema({
 })
 
 // Make a Model From The Schema
-const WorkExperience = mongoose.model('WorkExperience', workExperienceSchema)
+const Education = mongoose.model('Education', educationSchema)
 
 // Export the Model
-module.exports = WorkExperience
+module.exports = Education
