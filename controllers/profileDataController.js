@@ -42,7 +42,7 @@ const profileDataController = {
       }
     })
   },
-  showProfile (req, res, next) {
+  profileShow (req, res, next) {
     Profile.findById(req.params.id, (err, foundProfile) => {
       if (err) {
         res.status(400).send({ msg: err.message })
