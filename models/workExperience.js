@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 //Make a Schema
 const workExperienceSchema = new mongoose.Schema({
-    title: {type: String, require: true },
+    title: {type: String, required: true },
     employmentType: {type: String, required: true },
     companyName: {type: String, required: true },
     location: {type: String, required: true },

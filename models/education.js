@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 //Make a Schema
 const educationSchema = new mongoose.Schema({
-    school: {type: String, require: true },
+    school: {type: String, required: true },
     degree: {type: String, required: true },
     currentStudent: {type: Boolean, required: true },
     startDateMonth: {type: String, required: true },
