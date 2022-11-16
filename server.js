@@ -8,3 +8,8 @@ const MongoStore = require('connect-mongo')
 const db = require('./models/db')
 const app = express()
 
+
+// Tell the app to listen on port
+app.listen(3000, () => {
+    console.log('Listening on Port 3000')
+})
