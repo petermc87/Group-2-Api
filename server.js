@@ -31,6 +31,9 @@ app.use(
     })
 )
 
+// Start Middleware
+app.use(methodOverride('method'))
+
 // Tell the app to listen on port
 app.listen(3000, () => {
     console.log('Listening on Port 3000')
