@@ -1,7 +1,6 @@
 require ('dotenv').config()
 // Require modules
 const express = require('express')
-const methodOverride = require('method-override')
 const cors = require('cors')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
@@ -17,6 +16,7 @@ app.use((req, res, next) => {
 })
 app.use(cors())
 app.engine('jsx', require('jsx-view-engine').createEngine())
+app.use(express.json())
 app.set('view engine', 'jsx') // register the jsx view engine
 db.once('open', () => {
     console.log('connected to MongoDB Atlas')
@@ -32,7 +32,6 @@ app.use(
 )
 
 //* Start Middleware
-app.use(methodOverride('method'))
 app.use(express.static('public'))
 app.use('/profiles', require('./controllers/routeController'))
 app.use('/user', require('./controllers/authController'))
