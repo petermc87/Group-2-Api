@@ -31,8 +31,13 @@ app.use(
     })
 )
 
-// Start Middleware
+//* Start Middleware
 app.use(methodOverride('method'))
+app.use(express.static('public'))
+app.use('/profiles', require('./controllers/routeController'))
+app.use('/user', require('./controllers/authController'))
+//* End Middleware
+
 
 // Tell the app to listen on port
 app.listen(3000, () => {
