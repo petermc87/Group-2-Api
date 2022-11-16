@@ -22,6 +22,15 @@ db.once('open', () => {
     console.log('connected to MongoDB Atlas')
 })
 
+app.use(
+    session({
+        secret: process.env.SECRET,
+        store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
+        saveUninitialized: true,
+        resave: false,
+    })
+)
+
 // Tell the app to listen on port
 app.listen(3000, () => {
     console.log('Listening on Port 3000')
