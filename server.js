@@ -15,9 +15,7 @@ app.use((req, res, next) => {
     next()
 })
 app.use(cors())
-app.engine('jsx', require('jsx-view-engine').createEngine())
 app.use(express.json())
-app.set('view engine', 'jsx') // register the jsx view engine
 db.once('open', () => {
     console.log('connected to MongoDB Atlas')
 })
