@@ -1,5 +1,4 @@
-///////////////////////////////////////
-// Import Dependencies
+/// Import Dependencies
 
 const express = require('express')
 const User = require('../models/user')
@@ -31,6 +30,8 @@ router.post('/signup', async (req, res) => {
         res.json({ error })
       })
   })
+
+
 
 
 //// The login Routes (Get => form, post => submit form)
