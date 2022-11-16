@@ -4,6 +4,12 @@ profileIndex (req, res, next) {
 },
 showProfile (req, res, next) {
     res.json(res.locals.data.profile)
+},
+userIndex (req, res, next) {
+    res.json(res.locals.data.users)
+},
+showUser (req, res, next) {
+    res.json(res.locals.data.user)
 }
 
 }
