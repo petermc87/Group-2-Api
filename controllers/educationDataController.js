@@ -53,3 +53,5 @@ const educationDataController = {
     })
   }
 }
+
+module.exports = educationDataController
