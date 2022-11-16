@@ -23,9 +23,6 @@ const apiController = {
     accesibilityShow(req, res, next) {
         res.json(res.locals.data.accessibility)
     }
-
-
-
 }
 
 module.exports = apiController
