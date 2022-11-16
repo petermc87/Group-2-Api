@@ -53,3 +53,5 @@ const profileDataController = {
     })
   }
 }
+
+module.exports = profileDataController
