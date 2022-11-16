@@ -1,5 +1,11 @@
 const apiController = {
-//apiController code will go here
+profileIndex (req, res, next) {
+    res.json(res.locals.data.profiles)
+},
+showProfile (req, res, next) {
+    res.json(res.locals.data.profile)
+}
+
 }
 
 module.exports = apiController
