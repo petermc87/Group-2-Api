@@ -18,19 +18,9 @@
 # Project Struggles
 - Incorporating multiple models
 
-# Controllers
+# ERD
 
-## API Controller
-
-## Authentication Controller
-
-## Education Data Controller
-
-## Profile Data Controller
-
-## User Data Controller
-
-## Route Controller
+<img src="https://i.imgur.com/rs1ANBV.png" />
 
 # Project Collaborators
 - Anthony Ashcraft - https://github.com/anthonyash91
