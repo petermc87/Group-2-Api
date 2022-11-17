@@ -3,7 +3,7 @@ const router = express.Router()
 const apiController = require('./apiController')
 const profileDataController = require('./profileDataController.js')
 const userDataController = require('./userDataController.js')
-
+const accessibilityDataController = require('./accessibilityDataController')
 const educationDataController = require('./educationDataController')
 
 router.get('/profile', profileDataController.profileIndex, apiController.profileIndex)
