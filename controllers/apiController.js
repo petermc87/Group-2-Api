@@ -8,7 +8,7 @@ const apiController = {
     profileIndex(req, res, next) {
         res.json(res.locals.data.profiles)
     },
-    showProfile(req, res, next) {
+    profileShow(req, res, next) {
         res.json(res.locals.data.profile)
     },
     educationIndex(req, res, next) {
@@ -17,10 +17,16 @@ const apiController = {
     educationShow(req, res, next) {
         res.json(res.locals.data.education)
     },
+    workExperienceIndex(req, res, next) {
+        res.json(res.locals.data.workExperiences)
+    },
+    workExperienceShow(req, res, next) {
+        res.json(res.locals.data.workExperience)
+    },
     accessibilityIndex(req, res, next) {
         res.json(res.locals.data.accessibilitys)
     },
-    accesibilityShow(req, res, next) {
+    accessibilityShow(req, res, next) {
         res.json(res.locals.data.accessibility)
     }
 }
