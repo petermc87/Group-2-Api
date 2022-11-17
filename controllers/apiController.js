@@ -26,7 +26,7 @@ const apiController = {
     accessibilityIndex(req, res, next) {
         res.json(res.locals.data.accessibilitys)
     },
-    accesibilityShow(req, res, next) {
+    accessibilityShow(req, res, next) {
         res.json(res.locals.data.accessibility)
     }
 
