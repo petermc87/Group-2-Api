@@ -3,8 +3,8 @@ const router = express.Router()
 const apiController = require('./apiController')
 const profileDataController = require('./profileDataController.js')
 const userDataController = require('./userDataController.js')
-const educationDataController = require('./educationDataController')
 
+const educationDataController = require('./educationDataController')
 
 router.get('/profile', profileDataController.profileIndex, apiController.profileIndex)
 router.delete('/profile/:id', profileDataController.profileDestroy, apiController.showProfile)
