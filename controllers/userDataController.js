@@ -53,3 +53,5 @@ const userDataController = {
     })
   }
 }
+
+module.exports = userDataController
