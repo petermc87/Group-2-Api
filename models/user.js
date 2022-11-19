@@ -15,7 +15,6 @@ const userSchema = new Schema({
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
     password: { type: String, required: true },
-    confirmPassword: { type: String, required: true },
     agreeDisabilities: { type: Boolean, required: true },
     agreeTermsOfService: { type: Boolean, required: true }
 })

@@ -27,12 +27,12 @@ router.get('/access/:id', accessibilityDataController.accessibilityShow, apiCont
 
 router.get('/edu', educationDataController.educationIndex, apiController.educationIndex)
 router.delete('/edu/:id', educationDataController.educationDestroy, apiController.educationShow)
-router.put('/edu/:id', educationDataController.educationUpdate, apiController.accessibilityShow)
-router.post('/edu', educationDataController.educationCreate, apiController.accessibilityShow)
-router.get('/edu/:id', educationDataController.educationShow, apiController.accessibilityShow)
+router.put('/edu/:id', educationDataController.educationUpdate, apiController.educationShow)
+router.post('/edu', educationDataController.educationCreate, apiController.educationShow)
+router.get('/edu/:id', educationDataController.educationShow, apiController.educationShow)
 
-router.get('work', workExperienceDataController.workExperienceIndex, apiController.workExperienceIndex)
-router.delete('work/:id', workExperienceDataController.workExperienceDestroy, apiController.workExperienceShow)
+router.get('/work', workExperienceDataController.workExperienceIndex, apiController.workExperienceIndex)
+router.delete('/work/:id', workExperienceDataController.workExperienceDestroy, apiController.workExperienceShow)
 router.put('/work/:id', workExperienceDataController.workExperienceUpdate, apiController.workExperienceShow)
 router.post('/work', workExperienceDataController.workExperienceCreate, apiController.workExperienceShow)
 router.get('/work/:id', workExperienceDataController.workExperienceShow, apiController.workExperienceShow)

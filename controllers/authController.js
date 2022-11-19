@@ -7,22 +7,21 @@ const bcrypt = require('bcryptjs')
 // Create Route
 const router = express.Router()
 
-// The SignUp Routes (Get => form, post => submit form)
-router.get('/signup', (req, res) => {
-  res.render('user/SignUp.jsx')
-})
 
 router.post('/signup', async (req, res) => {
+  // console.log('we'e h)
 //// encrypt password
     req.body.password = await bcrypt.hash(
       req.body.password,
       await bcrypt.genSalt(10)
     )
+    console.log(req.body.password)
 ///// create the New user
     User.create(req.body)
       .then((user) => {
 //// redirect to login page
-        res.redirect('/user/login')
+        // res.redirect('/user/login')
+        res.json(user)
       })
       .catch((error) => {
 //// send error as json
@@ -35,7 +34,7 @@ router.post('/signup', async (req, res) => {
 
 router.post('/login', async (req, res) => {
 //// get the data from the request body
-    const { username, password } = req.body
+    const { username, password,  } = req.body
 //// search for the user
     User.findOne({ username })
       .then(async (user) => {
@@ -48,7 +47,8 @@ router.post('/login', async (req, res) => {
             req.session.username = username
             req.session.loggedIn = true
 //// redirect to Group-2-Api page if successful
-            res.redirect('/Group-2-Api')
+            // res.redirect('/Group-2-Api')
+            res.json(user)
           } else {
 //// error if password doesn't match
             res.json({ error: "password doesn't match" })
