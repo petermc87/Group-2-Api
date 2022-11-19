@@ -33,12 +33,6 @@ router.post('/signup', async (req, res) => {
 
 
 
-
-//// The login Routes (Get => form, post => submit form)
-router.get('/login', (req, res) => {
-  res.render('user/LogIn.jsx')
-})
-
 router.post('/login', async (req, res) => {
 //// get the data from the request body
     const { username, password } = req.body
