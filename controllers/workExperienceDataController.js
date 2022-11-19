@@ -1,4 +1,4 @@
-const workExperienceDataController = require('../models/workExperience')
+const WorkExperience = require('../models/workExperience')
 
 const workExperienceDataController = {
   workExperienceIndex (req, res, next) {

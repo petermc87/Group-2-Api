@@ -1,4 +1,4 @@
-const Accessibility = require('../models/accessibility')
+const Accessibility = require('../models/accessibilityOptions')
 
 const accessibilityDataController = {
   accessibilityIndex (req, res, next) {

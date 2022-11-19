@@ -31,7 +31,7 @@ app.use(
 
 //* Start Middleware
 app.use(express.static('public'))
-app.use('/profiles', require('./controllers/routeController'))
+app.use('/api', require('./controllers/routeController'))
 app.use('/user', require('./controllers/authController'))
 //* End Middleware
 
