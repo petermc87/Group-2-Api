@@ -3,11 +3,38 @@ const router = express.Router()
 const apiController = require('./apiController')
 const profileDataController = require('./profileDataController.js')
 const userDataController = require('./userDataController.js')
-
+const accessibilityDataController = require('./accessibilityDataController')
 const educationDataController = require('./educationDataController')
+const workExperienceDataController = require('./workExperienceDataController')
 
 router.get('/profile', profileDataController.profileIndex, apiController.profileIndex)
-router.delete('/profile/:id', profileDataController.profileDestroy, apiController.showProfile)
-router.put('/profile/:id', profileDataController.profileUpdate, apiController.showProfile)
-router.post('/profile', profileDataController.profileCreate, apiController.showProfile)
-router.get('/profile/:id', profileDataController.profileShow, apiController.showProfile)
+router.delete('/profile/:id', profileDataController.profileDestroy, apiController.profileShow)
+router.put('/profile/:id', profileDataController.profileUpdate, apiController.profileShow)
+router.post('/profile', profileDataController.profileCreate, apiController.profileShow)
+router.get('/profile/:id', profileDataController.profileShow, apiController.profileShow)
+
+router.get('/user', userDataController.userIndex, apiController.userIndex)
+router.delete('/user/:id', userDataController.userDestroy, apiController.userShow)
+router.put('/user/:id', userDataController.userUpdate, apiController.userShow)
+router.post('/user', userDataController.userCreate, apiController.userShow)
+router.get('/user/:id', userDataController.userShow, apiController.userShow)
+
+router.get('/access', accessibilityDataController.accessibilityIndex, apiController.accessibilityIndex)
+router.delete('/access/:id', accessibilityDataController.accessibilityDestroy, apiController.accessibilityShow)
+router.put('/access/:id', accessibilityDataController.accessibilityUpdate, apiController.accessibilityShow) 
+router.post('/access', accessibilityDataController.accessibilityCreate, apiController.accessibilityShow)
+router.get('/access/:id', accessibilityDataController.accessibilityShow, apiController.accessibilityShow)
+
+router.get('/edu', educationDataController.educationIndex, apiController.educationIndex)
+router.delete('/edu/:id', educationDataController.educationDestroy, apiController.educationShow)
+router.put('/edu/:id', educationDataController.educationUpdate, apiController.accessibilityShow)
+router.post('/edu', educationDataController.educationCreate, apiController.accessibilityShow)
+router.get('/edu/:id', educationDataController.educationShow, apiController.accessibilityShow)
+
+router.get('work', workExperienceDataController.workExperienceIndex, apiController.workExperienceIndex)
+router.delete('work/:id', workExperienceDataController.workExperienceDestroy, apiController.workExperienceShow)
+router.put('/work/:id', workExperienceDataController.workExperienceUpdate, apiController.workExperienceShow)
+router.post('/work', workExperienceDataController.workExperienceCreate, apiController.workExperienceShow)
+router.get('/work/:id', workExperienceDataController.workExperienceShow, apiController.workExperienceShow)
+
+module.exports = router
